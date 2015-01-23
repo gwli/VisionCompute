@@ -20,3 +20,8 @@ beautiful mathematical formulas.
    digraph foo {
      "bar" -> "baz";
    }
+
+
+
+:math:` e^{i\pi} + 1 = 0`
+

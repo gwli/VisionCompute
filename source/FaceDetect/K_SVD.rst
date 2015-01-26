@@ -47,3 +47,43 @@ x_R^k=x_T^k\Omega
 
 #. 浅谈K-SVD http://www.cnblogs.com/salan668/p/3555871.html
 
+K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Representation
+================================================================================
+
+这种被称为extreme sparse represention，每次只能更新一个原子。
+
+..math::
+
+D^{(n+1)}=D^{(n)}-\eta\sum_{i=1}^N(D^{(n)}x_i-y_i)x_i^T 
+
+.. note::
+
+这个目前还不太理解，那x是孤立的。
+
+
+noIt = 200
+[rows,cols]=size(y);
+ r=randperm(cols); 
+A=y(:,r(1:codebook_size)); 
+A=A./repmat(sqrt(sum(A.^2,1)),rows,1); 
+D=A;
+X=y;
+K = 50;
+
+for it = 1:noIt
+    W=OMP(D,X,4.0/5*rows); 
+    R = X - D*W;  %这里包含的应该是误差。  如果是真的，还是应该差不多，如果不是真的，下一次应该包含些。
+    for k=1:K
+        I = find(W(k,:));
+        Ri = R(:,I) + D(:,k)*W(k,I);  % 构成一个虚的向量。
+        [U,S,V] = svds(Ri,1,'L');
+        % U is normalized
+        D(:,k) = U;
+        W(k,I) = S*V';
+        R(:,I) = Ri - D(:,k)*W(k,I);
+    end    
+end
+
+假设他对的，然后更新其中一个。D，W是相互独立的，因此可以估计。
+
+每次只更新一对。这里的约束也可以是D或者W不再变化

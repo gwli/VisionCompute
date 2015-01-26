@@ -2,20 +2,20 @@ K-SVD
 *******
 
 
-����k-svd��ֱ��ʹ��ԭͼ��
+这是k-svd，直接使用原图像。
 
-K_SVD�㷨ģ��
+K_SVD算法模型
 =============
 
 ..math::
 
 \min\limits{D,X}{||Y-DX||_F^2}\;  \;\;subject \;to \forall i, ||x_i||_0\leq T_0
 
-�����K��over-complete�ֵ��С��
+这里的K是over-complete字典大小。
 
-����dictionary D
+更新dictionary D
 =================
-��ΪD��һ��������Ҫ���Ԫ�غܶ࣬�����������ÿ��ֻ����һ��D_j������$j\neq k$���䣬��������ķ�����
+因为D是一个矩阵，需要求的元素很多，所以这里采用每次只估计一个D_j，其他$j\neq k$不变，交替迭代的方法。
 
 .. math::
 
@@ -25,7 +25,7 @@ K_SVD�㷨ģ��
    =||E_k-d_kx_T^k||_F^2\\
    \end{array}
 
-��֤ʣ�������Ѿ����Ƶ���������
+保证剩余误差和已经估计的向量正交
 
 .. math::
 
@@ -36,27 +36,27 @@ K_SVD�㷨ģ��
 
 
 
-�㷨�ܽ�
+算法总结
 ========
 
-#.  ���ȹ���ϡ���ʾ��Ȼ������ֵ䣬���ֵ���Ƶ�ʱ�򣬲���ÿ��ֻ����һ��Dj���������䣬��������ķ�����
-#.  ��k-means�ȽϽ��ƣ������ǲ�֪���κΣ�������D,����x��Ȼ����x�ֿ�ʼ����D��
+#.  首先估计稀疏表示，然后估计字典，在字典估计的时候，采用每次只估计一个Dj，其他不变，交替迭代的方法。
+#.  和k-means比较近似，首先是不知道任何，随便假设D,估计x，然后由x又开始估计D。
 
-�ο�
+参考
 ====
 
-#. ǳ̸K-SVD http://www.cnblogs.com/salan668/p/3555871.html
+#. 浅谈K-SVD http://www.cnblogs.com/salan668/p/3555871.html
 
 K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Representation
 =====================================================================================
 
-���ֱ���Ϊextreme sparse represention��ÿ��ֻ�ܸ���һ��ԭ�ӡ�
+这种被称为extreme sparse represention，每次只能更新一个原子。
 
 ..math:: D^{(n+1)}=D^{(n)}-\eta\sum_{i=1}^N(D^{(n)}x_i-y_i)x_i^T 
 
 .. note::
 
-   ���Ŀǰ����̫���⣬��x�ǹ����ġ�
+   这个目前还不太理解，那x是孤立的。
 
 .. code-block:: matlab
 
@@ -71,10 +71,10 @@ K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Represent
     
     for it = 1:noIt
         W=OMP(D,X,4.0/5*rows); 
-        R = X - D*W;  %���������Ӧ������  �������ģ�����Ӧ�ò�࣬���������ģ���һ��Ӧ�ð���Щ��
+        R = X - D*W;  %这里包含的应该是误差。  如果是真的，还是应该差不多，如果不是真的，下一次应该包含些。
         for k=1:K
             I = find(W(k,:));
-            Ri = R(:,I) + D(:,k)*W(k,I);  % ����һ�����������
+            Ri = R(:,I) + D(:,k)*W(k,I);  % 构成一个虚的向量。
             [U,S,V] = svds(Ri,1,'L');
             % U is normalized
             D(:,k) = U;
@@ -83,6 +83,6 @@ K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Represent
         end    
     end
 
-�������Եģ�Ȼ���������һ����D��W���໥�����ģ���˿��Թ��ơ�
+假设他对的，然后更新其中一个。D，W是相互独立的，因此可以估计。
 
-ÿ��ֻ����һ�ԡ������Լ��Ҳ������D����W���ٱ仯
+每次只更新一对。这里的约束也可以是D或者W不再变化

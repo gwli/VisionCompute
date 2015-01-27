@@ -7,9 +7,9 @@ K-SVD
 K_SVD算法模型
 =============
 
-..math::
+.. math::
 
-\min\limits{D,X}{||Y-DX||_F^2}\;  \;\;subject \;to \forall i, ||x_i||_0\leq T_0
+   \min\limits{D,X}{||Y-DX||_F^2}\;  \;\;subject \;to \forall i, ||x_i||_0\leq T_0
 
 这里的K是over-complete字典大小。
 
@@ -52,7 +52,7 @@ K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Represent
 
 这种被称为extreme sparse represention，每次只能更新一个原子。
 
-..math:: D^{(n+1)}=D^{(n)}-\eta\sum_{i=1}^N(D^{(n)}x_i-y_i)x_i^T 
+.. math:: D^{(n+1)}=D^{(n)}-\eta\sum_{i=1}^N(D^{(n)}x_i-y_i)x_i^T 
 
 .. note::
 

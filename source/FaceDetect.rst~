@@ -4,4 +4,8 @@
 .. include:: FaceDetect/direction.rst
 .. include:: FaceDetect/K_SVD.rst
 .. include:: FaceDetect/AdaboostAlgorithm.rst
-.. include:: FaceDetect/CompressedSensing.rst
+
+
+.. math::
+   
+   a = b^2 + c^2

@@ -16,4 +16,3 @@
 .. include:: ImageProcess/ImageTracking.rst
 .. include:: ImageProcess/HoughTransform.rst
 .. include:: ImageProcess/ImageCompressed.rst
-.. include:: ImageProcess/BSS.rst

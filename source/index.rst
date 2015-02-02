@@ -12,8 +12,10 @@ Contents:
    :maxdepth: 2
 
    ImageProcess
+   ComputerVision
+   3DReconstruction
    FaceDetect
-   MathTrial
+   Math
 
 Indices and tables
 ==================

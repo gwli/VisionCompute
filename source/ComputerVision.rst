@@ -1,4 +1,4 @@
-计算机视觉基础方法
+璁＄畻鏈鸿瑙夊熀纭�鏂规硶
 ==================
 
 .. include:: ComputerVision/ComputerVision.rst

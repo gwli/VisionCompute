@@ -2,14 +2,11 @@
 `机器学习 <machineLearning>`_ 
 ==================================
 
-
 对于相机的标定源于 `摄影测量学 <http://jpkt.whu.edu.cn/jpkc2005/syclx/3.class%20online/prscladuc.htm>`_  
 `摄相机标定 <http://wenku.baidu.com/view/c0df13d7b9f3f90f76c61be4.html>`_ 
 
 application
 ===========
-
-
 
 .. csv-table:: 
 

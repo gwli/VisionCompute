@@ -4,7 +4,6 @@ ImageMagick
 Introduction
 ============
 
-
 imagemagick 是一个超强的库，并且指命令行接口异常的强大，基本上图片处理，画图功能它都已经提供了。可以说是一个cli版的GIMP。 同时它又像其他的linux工具一样，它的功能一种是在编译时通过各种宏来指定。另一种方式那就是采用配置文件。并且采用一定的搜索算法。最先开始在当前文件夹下.magick文件开始。从了一些正常的参数之外，还可以通过+define指定的那些隐性的参数。并且用identify 命令可以读取也可以添加各种的`元数据到图片中 <http://www.exif.org/>`_  `exiv2 <http://exiv2.org/>`_ 同时还能够把这些元数据给strip掉，就像gcc的编译一样。每一个图片本身就是对象，我可以图像的统计信息放在元数据里，放在comments里，并且它支持一些通配符。简单的命令可以用convert,mogrify,display等，脚本可以使用`conjure <http://imagemagick.sourceforge.net/http/www/conjure.html#msl>`_ .%RED%而这个正是想要的一直准备去做的一件事之一。如何实现一个动态搜索接口。win7的文件浏览器功能就不错。自己是不是可以基于开源的文件浏览器改出来一个。%ENDCOLOR%其实imagemagick提供了一整套的命令行，包括管理显示排序方面关于图片的，问题自己如何利用这些。
 #. `如何显示那文件属性 <http://www.edbott.com/weblog/2005/06/tip-of-the-day-use-metadata-to-organize-digital-pictures/>`_  可以直接使用identify,convert来查看与编辑图片的属性。
 #. `best-free-digital-image-viewer.htm <http://www.techsupportalert.com/best-free-digital-image-viewer.htm>`_ 
@@ -15,7 +14,6 @@ imagemagick 是一个超强的库，并且指命令行接口异常的强大，�
 
 color space management
 ======================
-
 
 一些美学原理是在以及各种颜色空间都在[[Study.ColorTransform]]。在这里只提到在计算机中，颜色的深度的问题，就是指你用几位来表示一种颜色。同时也还有一个采用量化的过程。其中之一多少个像素点代表真实的一个点。这个是采用率的问题，这个图放大与缩小的时候，会采用到，例如缩放时是直接按点踩，还是说几个点中取中值，还是如何。这个在opengl的光栅化时也同样有这样的问题，在光栅化之本身只有顶点数据的，内部的尺寸大小不同时与纹理的映射关系其实就是采样的过程。你可以指定取最大值，取最小值，或者采用滤波的方式来设置都是可以的。以及颜色本身减少压缩也是这样的。
 文件本身存储的字节序的问题在这里都是可以指定所修改的。

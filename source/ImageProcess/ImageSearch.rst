@@ -12,7 +12,4 @@ See also
 ========
 
 
-Thinking
-========
-
 

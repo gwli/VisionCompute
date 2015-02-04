@@ -39,10 +39,3 @@ matlab实现：histeq函数。
 `直方图维基定义 <http://zh.wikipedia.org/wiki/%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96>`_ 这里给出的定义，扩展常用的亮度。也就是概率最大的亮度之间的差值。
 
 所以直方图均衡化只改变宽度，不改变形状。同时我们也指定均衡化的宽度。
-
-
-pythonmagick download and install
-
--- Main.GegeZhang - 22 Jul 2013
-pythonmagick download
-

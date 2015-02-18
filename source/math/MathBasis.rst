@@ -1,3 +1,4 @@
+
 `混沌理论 <http://www.mysanco.com/index.php?class=wenku&action=wenku_item&id=109>`_ 
 ===================================================================================
 
@@ -28,6 +29,7 @@ root mean square sqrt（1/N sum（（x1-x0)^2+（y1-y0)^2）） x1 和y1变动�
 [Direct Position Determination of Multiple Radio Signals]
 
 `随机过程 <StochasticProcesses>`_ 
+
 See also
 ========
 
@@ -83,7 +85,6 @@ Thinking
 梁伟说 图像搜索，视频图像处理现在比较火。
 
 -- Main.GegeZhang - 14 Oct 2013
-
 
 
 

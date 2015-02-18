@@ -13,7 +13,6 @@
 
 *图像处理流程*
 
-
 .. graphviz::
 
    digraph structs { 
@@ -26,10 +25,8 @@
    struct1->struct2
    }
    
-   
-
-
--- Main.GegeZhang - 19 Jun 2013
+参考
+==== 
 
 `刘青松科研语录 <http://www.360doc.com/content/09/0214/14/82202_2540927.shtml>`_ 
 

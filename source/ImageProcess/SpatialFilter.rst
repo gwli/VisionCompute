@@ -13,7 +13,6 @@ SMOOTH和SMOOTH_MORE平滑的越多图像越模糊。SHARPEN可以通过中间�
 图像逻辑运算（减法）
 ==============================
 
-
 在matlab中图像是通过极坐标实现的，现在目前基于smile.jpg的结果是，从小到大变化图像半径和旋转角度，
 半径 小->大，呈现图像的顺序嘴巴——》眼睛-》脸庞-》腮红。 这个出来的先后顺序是和这些边缘变化的模糊度有关，模糊度越高，出来的越慢。
 
@@ -37,7 +36,9 @@ Prewitt算子：  采用局部平均，对噪声有一定的抑制作用。
 
 
 Laplace 算子： 具有各项同性微分算子，具有`旋转不变性 <http://www.narutoacm.com/archives/laplace-rotation-invariant/>`_ :
-%\[Laplace\left( f \right) = \frac{{{\partial ^2}f}}{{\partial {x^2}}} + \frac{{{\partial ^2}f}}{{\partial {y^2}}}\]%
+
+.. math::
+   Laplace\left( f \right) = \frac{{{\partial ^2}f}}{{\partial {x^2}}} + \frac{{{\partial ^2}f}}{{\partial {y^2}}}
 
 空域滤波，点检测，线检测。
 
@@ -69,8 +70,6 @@ DFT就像一个[[http://wenku.baidu.com/view/014797737fd5360cba1adbed.html[数�
 #. `同态滤波论文去试一试 <http://wenku.baidu.com/view/1017d4212f60ddccda38a04c.html>`_ 
 #. `图像渐变算法及实现 <http://staff.ustc.edu.cn/~lfdong/research/Biharmonic%20image%20warping.pdf>`_ 
 
-
-
 See also
 ========
 
@@ -93,67 +92,29 @@ See also
 Thinking
 ========
 
-
-
-中值滤波怎样调用，实现
-
--- Main.GegeZhang - 02 Jul 2013
-
-
 拉普拉斯算子二阶导数增强细节，sobel算子边缘。
-
--- Main.GegeZhang - 02 Jul 2013
-
 
 *一阶微分与二阶微分* http://blog.csdn.net/kayv/article/details/2261540
   1. 斜坡面上，一阶微分一直不为0 ；二阶微分只有终点和起点不为0
   1. 一阶微分产生较粗的边缘，二阶微分则细得多
   1. 一阶微分处理一般对灰度阶梯有较强的响应；二阶微分处理细节有较强的响应
 
--- Main.GangweiLi - 03 Jul 2013
-
-
-cv中源文件没有办法打开？怎么查看源文件？
-
--- Main.GegeZhang - 03 Jul 2013
-
-
-空间滤波增强和边缘检测完全是独立的吗？
-
--- Main.GegeZhang - 03 Jul 2013
-
-
-怎样加入噪声？
-
--- Main.GegeZhang - 03 Jul 2013
-
 
 对于小图像用mask不合适，因为会有模糊，那用什么方法合适那？mask尺寸和物体尺寸的关系。
 
 
-
--- Main.GegeZhang - 03 Jul 2013
-
-
 怎样实现调用C代码？
-
--- Main.GegeZhang - 04 Jul 2013
-
 
 *C:\快盘\graphic\paper\1673-2944(2012)03-0022-05.pdf*
 基于DFT压缩。
 
--- Main.GangweiLi - 07 Jul 2013
 
 
 如果我在较暗的情况下整体加上一个数的话，图像图像整体变量了，但还是对比度不高，
 
--- Main.GegeZhang - 22 Jul 2013
-
 
 python 中怎样plt.axes 怎样调节参数
 
--- Main.GegeZhang - 22 Jul 2013
 
 
 雷达数据 到成像 过程
@@ -165,9 +126,6 @@ python 中怎样plt.axes 怎样调节参数
 
 `雷达RCS曲线 <http://aircraftdesign.nuaa.edu.cn/lo/Notes/14.pdf>`_ 中可以看出来机头，机尾 和两边机翼都比较明显
 
--- Main.GegeZhang - 28 Jul 2013
-
 
 *对一维到二维一直推广，其实是假定了，图像线性时不变系统。所以先算行或者例都是没有关系。这是由于线性系统自身性质决定的。
 
--- Main.GangweiLi - 18 Aug 2013

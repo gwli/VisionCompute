@@ -1,5 +1,3 @@
-
-
 图像恢复 （降噪）
 *****************
 
@@ -42,23 +40,37 @@ G=F*H+N 还是G=H(F+N)
 =================================
 
 对于函数y =ax, for  x是输入图像，a是退化函数，y是输出。
-输入w(0)值(近似a的逆运算)，得到x(0)= w(0)*y,
+输入w(0)值(近似a的逆运算)，得到:
 
-aug_y=(y'*y)^(-1)*y'; % 最小二乘,使残差最小
+.. math::
+
+   x(0)= w(0)*y,
+.. math::
+
+   aug_y=(y\prime*y)^(-1)*y\prime; 
+
+最小二乘,使残差最小
+
+.. math::
+
 w(1) = aug_y*y
-err=y'*(eye(10)-y*w(i)); % 正交
 
-直到w(i),i=1,,,N小于某个数量级，比如r_n<10e-6,停止迭代。
+.. math::
+
+   err=y\prime*(eye(10)-y*w(i)); % 正交
+
+直到 :math:`w(i),i=1`,N小于某个数量级，比如 :math:`r_n<10e-6`, 停止迭代。
 否则更新w
+
 关于运动模糊的物理
-===========================
+==================
 
 可以根据运动方程来建立模型，然后进行恢复，例如水平运动的基础是运动的距离可以由傅里叶变换的周期性来检测。并且第一旁瓣宽度的关系。图像变换的周期是与物体运动的周期或者对称是相关的。还有那是旋转后的出现的模糊。并且这个要一下实验。水平运动可不可以x,y都有，或者经过旋转到一个方向在进行。 包括水滴消除也是这样进行的。对于车牌检测的就是直接使用逆滤波的结论并且还做了简化，原来的两个方向的，其中做了进一步分析（ua+vb)这个值是多少，它本身就是一个Sar函数相于平移了。
 
 `维纳滤波 <http://bj3s.pku.edu.cn/activity/subjects/shuoshi/lesson_11.pdf>`_ 
 =================================================================================
 
-wiener filtering是相对于 inverse filtering 和smooth filtering 的一个折中，目标函数[\hat s- s]^2 最小，最后得出信号的系数（相对于噪声的系数），也就是要知道信号和噪声的方差。但是实际中这个怎样给出？但是并不是wiener filtering 对所有的 退化图像和噪声都有用，
+wiener filtering是相对于 inverse filtering 和smooth filtering 的一个折中，目标函数 :math:`[\hat s- s]^2` 最小，最后得出信号的系数（相对于噪声的系数），也就是要知道信号和噪声的方差。但是实际中这个怎样给出？但是并不是wiener filtering 对所有的 退化图像和噪声都有用，
 我想还是根据不同的模型，设计不同的方法，学会建模，并且利用数学方程求解。无非就是就极值的问题。
 
 傅里叶变换
@@ -69,7 +81,6 @@ wiener filtering是相对于 inverse filtering 和smooth filtering 的一个折�
 图像复原小结
 ==================
 
-
 问题：从噪声和退化函数中估计原始图像。
 
 对于噪声，可以用低通滤波器，但是这样通常会造成图像的损失，也就是噪声和细节是一对矛盾，
@@ -77,9 +88,6 @@ wiener filtering是相对于 inverse filtering 和smooth filtering 的一个折�
 维纳滤波主要解决噪声的问题，对于退化函数，通常是有一定的先验知识。
 
 傅里叶变换应用：对于特定小点，可以通过傅里叶变换来比较。比如眼睛。纹理分类。
-
-
-
 
 #. `Multi-dimensional image processing  <http://docs.scipy.org/doc/scipy/reference/ndimage.html>`_  里面有专门的各种滤波器
 #. `noise 1.2.1 <https://pypi.python.org/pypi/noise/>`_  python噪声包
@@ -92,99 +100,3 @@ wiener filtering是相对于 inverse filtering 和smooth filtering 的一个折�
 #. `雨滴去除 <http://www.comp.nus.edu.sg/~leowwk/papers/icme2006.pdf>`_  来这做一下这样的效果。
 #. `Wiener Filtering   <http://www.owlnet.rice.edu/~elec539/Projects99/BACH/proj2/wiener.html>`_  应该比较详细，看一下
 #. `穿墙雷达 <http://detail.cn.china.cn/provide/2595430314.html>`_  超宽带波藉由墙壁反弹的方式?及高性能的处理器而找到障碍物。可判读出在极短时间内的变化产生轻微的动作
-
-
--- Main.GegeZhang - 04 Jul 2013
-
-
-从图像转换到int，使用哪个那？
-从array转换为图像，我们使用的无符号数整数（uint8），这里是8位的，图像转换时用 np.asarray, 转化为array。
-
--- Main.GegeZhang - 08 Jul 2013
-
-
-对于某一个模型，可不可以直接从信号画出曲线？
-
--- Main.GegeZhang - 08 Jul 2013
-
-
-np.asarray 适用于一般自己创立的array ，np.asfarray 适合于图像本身的array？
-
--- Main.GegeZhang - 08 Jul 2013
-
-
-怎样在 frequency_c 中使用class？
-
--- Main.GegeZhang - 08 Jul 2013
-
-
-Image.fromarray 矩阵怎样转换成图像
-
-Image.fromarray（a.dtype('uint8')）
-
--- Main.GegeZhang - 08 Jul 2013
-
-
-退化函数 怎样估计？
-
-比如在匀速运动中，距离是确定的，曝光时间是去确定的，因此可以大概估计出来平均速度。
-
--- Main.GegeZhang - 09 Jul 2013
-
-
-傅里叶变换的最初的设计是用来表示任意函数，-》其中任意函数分解成周期就是用的是积分（傅里叶变换）。其具体应用到哪里那？
-
-
--- Main.GegeZhang - 11 Jul 2013
-
-
-同态滤波器通过高通滤波器，强度不发生变化？
-
--- Main.GegeZhang - 11 Jul 2013
-
-
-通过我们自己照片，看看有我们问题
-
--- Main.GegeZhang - 11 Jul 2013
-
-
-同态滤波器，怎样进行测试，了解原理？
-
-
--- Main.GegeZhang - 11 Jul 2013
-
-
-*曲面拟合*
-一维的曲线拟合，对于二维的来说那就是曲面拟合，或者把二维拉到一维进行曲线拟合。
-`10.23.05 <http://www.cs.jhu.edu/~misha/Fall05/10.23.05.pdf>`_  曲线拟合论文，其实后面的最小二乘的滤波那就是曲线拟合的评价函数，只不是二维的，那现在曲面的拟合与opengl中曲面分割又是什么关系。
-
--- Main.GangweiLi - 20 Jul 2013
-
-
-逆滤波中 在图像恢复中得到的图像和源图像误差很小，但是做ifft做之后出现了无限小的情况？
-
--- Main.GegeZhang - 21 Jul 2013
-
-
-怎样在加入 C++文件到python 中？
-
-
--- Main.GegeZhang - 22 Jul 2013
-
-
-为什么在苏州的图片中傍晚的直方图中呈现出夜晚的比较多，如果我把背景去掉，也就是把第一个像素值去掉会怎么样？
-
--- Main.GegeZhang - 22 Jul 2013
-
-
-*噪声的估计*
-其中一种是基于直方图对澡声进行估计，利用基准图像来进行测试的。还有一种那就是根据傅里变换来进行估计的。
-*退化函数*
-建立各种模型来估计退化函数。
-
--- Main.GangweiLi - 24 Jul 2013
-
-
-另外一个方法，那就是二维滤波器是如何设计。百度文库里有不少，看看一常用的做法。
-
--- Main.GangweiLi - 24 Jul 2013

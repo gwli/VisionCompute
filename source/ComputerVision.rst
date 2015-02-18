@@ -1,4 +1,4 @@
-计算机视觉基础方法
+������Ӿ���������
 ==================
 
 .. include:: ComputerVision/ComputerVision.rst

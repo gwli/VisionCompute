@@ -1,7 +1,6 @@
 图像拼接
 ********
 
-
 Lucas–Kanade 方法 
 ======================
 
@@ -12,6 +11,7 @@ Lucas–Kanade 方法
 
 .. math:: \frac{{\partial I}}{{\partial p}} = \frac{{\partial I}}{{\partial W}}\frac{{\partial W}}{{\partial p}}{\rm{ = }}\left\langle {\nabla I,\left[ {\frac{{\partial {W_x}}}{{\partial p}}\frac{{\partial {W_y}}}{{\partial p}}} \right]} \right\rangle 
 最后用最小二乘算法实现对p的估计。
+
 See also
 ========
 

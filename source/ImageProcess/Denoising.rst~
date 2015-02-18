@@ -3,7 +3,7 @@
 
 k-L 变换就是求数据的协方差矩阵的特征值和特征向量。
 
-基于PCA的降噪，
+-基于PCA的降噪，
 ======================
 
 PCA降噪方法和之前的降维差不多，对于降噪来说，就是获得信号子空间和噪声子空间，-》从噪声子空间中估计噪声方差-》remove 噪声子空间
@@ -42,3 +42,141 @@ haar变换，就是利用上一个点对下一点进行相减，在信号不变�
 #. `相干斑形成原理 <http://wenku.baidu.com/view/6927221014791711cc79173e.html>`_  这个基本还行，理解了相干斑 
 #. `Lee滤波，这个是python 版本的，但是这个看不太懂，让老李看下 <https://github.com/josephmeiring/LeeFilter>`_  
 #. `量子力学 <http://open.sina.com.cn/course/id&#95;32/>`_  
+
+降噪首先分为两种方法：第一种是目标信号增强，增强信噪比，另一种是降低噪声
+
+-- Main.GegeZhang - 03 Aug 2013
+
+
+微弱小目标降噪 方法 k-l transform, wavelet, correlation analysis
+
+-- Main.GegeZhang - 04 Aug 2013
+
+
+动态背景建模方法
+
+-- Main.GegeZhang - 04 Aug 2013
+
+
+为什么在K-L变换中首先要减去平均值，是噪声吗？
+
+我想是噪声，其实方差矩阵就是数据的抖动.
+
+-- Main.GegeZhang - 04 Aug 2013
+
+
+小波变换 视频
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+小波变换可以降噪？
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+svd 分解在特征值之后最小的特征值有均匀分布的特点，可以通过特征值来识别，那特征值是最好的吗？ 对于噪声？ 还有哪些？
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+PCA只适用于高斯噪声？
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+对于对GPS的导航，船，我们应该怎么办？设计更好的信号？怎么设计？
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+小波变换傅里叶变换的区别和联系
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+`data-adaptive transforms'.有空看一下，是不是可以获得更好的结果，相比傅里叶变换和小波变换
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+curvelet transform,是什么　多分辨率的，具体是什么
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+稀疏的，和降噪是一体的，目的就是获得更少的数据
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+就像手机铃声一样，这样应用虽然没有什么技术含量，但是使用的人却是非常多，比如让人很容易的表现出自己的个性，想qq空间中的，人可以上传自己的图片，可以加入评语，
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+为什么2的整数次幂，计算机容易实现？
+
+-- Main.GegeZhang - 06 Aug 2013
+
+
+我想相干斑 也可以用 盲源分离来抑制
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+对于纪晨华中的问题是不是也会出现一个分辨单元中多个信号，分辨率不够，
+
+如果对于一个照射源的话，还有这个问题吗？
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+ Rayleigh 和  Rician分布的区别，  Rician 应该是Rayleigh加一个强信号就可以了吗
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+纪晨华的问题我想可不可以成像？ 是可以在信号上处理也可以在图像上处理
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+什么是循环高斯过程？
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+对于乘性噪声，可以通过同态滤波器，转换为同态滤波器，这样基于加性噪声的滤波器就可以用来降噪了
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+在雷达目标探测和成像上，有什么区别和类似？吴博士
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+zero-mean什么
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+ k-space dimension 什么
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+为什么谱白化会加强热噪声效应？
+
+-- Main.GegeZhang - 13 Aug 2013
+
+
+小波降噪的程序，在噪声未知情况下 现在还没有找到
+
+-- Main.GegeZhang - 19 Aug 2013
+
+
+图像处理在信号上降噪的？也就是在图像之前？ 老刘都是假设信号是纯净的.
+
+-- Main.GegeZhang - 19 Aug 2013

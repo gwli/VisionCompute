@@ -3,26 +3,36 @@
 
 多尺度Harris角点探测：
 
-%\[{m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right) = \det \left( {\Gamma \left( {\vec p;{\sigma _D},{\sigma _I}} \right)} \right) - \kappa t{r^2}\left( {\Gamma \left( {\vec p;{\sigma _D},{\sigma _I}} \right)} \right)\]%
+.. math::
+
+   {m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right) = \det \left( {\Gamma \left( {\vec p;{\sigma _D},{\sigma _I}} \right)} \right) - \kappa t{r^2}\left( {\Gamma \left( {\vec p;{\sigma _D},{\sigma _I}} \right)} \right)
+
 
 对于特定的尺度
-.. math:: \sigma,尺度归一化的Laplacian算子为：
+:math:`\sigma`,尺度归一化的Laplacian算子为：
 
-%\[{\Delta_N}L( {\vec p;\sigma}) = \sigma\Delta L({\vec p;\sigma}) = \sigma(L_{xx}( {\vec p;\sigma} ) + L_{yy}({\vec p;\sigma}))\]%
+.. math::
+
+   {\Delta_N}L( {\vec p;\sigma}) = \sigma\Delta L({\vec p;\sigma}) = \sigma(L_{xx}( {\vec p;\sigma} ) + L_{yy}({\vec p;\sigma}))
 
 
-.. math:: L_{xx}$%和 %$L_{yy}是x和y的二阶偏导数。
+
+:math:`L_{xx}` 和 :math:`L_{yy}` 是x和y的二阶偏导数。
 
 基于上述知识，Harris-Laplace执行如下两步：
-#. 取
-.. math:: {m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right)的最大值点为感兴趣的点：
+#. 取 :math:`{m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right)` 的最大值点为感兴趣的点：
 
-%\[\vec p = \mathop {\arg  \max }\limits_{\vec p} {m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right),{\sigma _I} = {\gamma ^2}{\sigma _D}\]%
+.. math::
 
-#. 根据
-.. math:: {\Delta _N}L\left( {\vec p;\sigma } \right) 的局部极值选择特征尺度：
+   \vec p = \mathop {\arg  \max }\limits_{\vec p} {m_l}\left( {\vec p;{\sigma _D},{\sigma _I}} \right),{\sigma _I} = {\gamma ^2}{\sigma _D}
 
-%\[{\sigma _D} = \mathop {\arg  \min }\limits_{{\sigma _D}} {\Delta _N}L\left( {\vec p;{\sigma _D}} \right)\]%
+
+#. 根据 :math:`{\Delta _N}L\left( {\vec p;\sigma } \right)` 的局部极值选择特征尺度：
+
+.. math::
+
+   {\sigma _D} = \mathop {\arg  \min }\limits_{{\sigma _D}} {\Delta _N}L\left( {\vec p;{\sigma _D}} \right)
+
 
 *这个文章的创新点就在特征尺度选择*。
 

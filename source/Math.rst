@@ -2,6 +2,7 @@
 ****
 
 .. include:: math/MathBasis.rst
+.. include:: math/ModernAlgebra.rst
 .. include:: math/ChaosTheory.rst
 .. include:: math/DiscreteMathematics.rst
 .. include:: math/HigherMathematics.rst

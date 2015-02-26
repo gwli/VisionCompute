@@ -1,10 +1,10 @@
 数学
 ****
 
+.. include:: math/MathBasis.rst
 .. include:: math/ChaosTheory.rst
 .. include:: math/DiscreteMathematics.rst
 .. include:: math/HigherMathematics.rst
-.. include:: math/MathBasis.rst
 .. include:: math/MathematicalAnalysis.rst
 .. include:: math/MatrixTheory.rst
 .. include:: math/NumberTheory.rst

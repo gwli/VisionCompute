@@ -37,8 +37,14 @@ G的代数运算满足交换率，则称为交换群。
 
 #. *域* 可除环就是域，也就是非零元素都要有逆元。也就是可以做除法的环就做域。
 
+我们平时所说的定义域，值域，域就是指上面的定义的域。
+
+#. *空间*  具有特定结构的集合。  http://en.wikipedia.org/wiki/Space_(mathematics)
+    而常见的结构有 http://en.wikipedia.org/wiki/Mathematical_structure。 
 #. 线性空间
 例如只满足加法与数乘集合就叫线性空间。以及八条性质就就叫空间了。
+
+
 
 See also
 ========

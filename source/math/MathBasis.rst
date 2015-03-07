@@ -78,6 +78,11 @@ root mean square sqrt（1/N sum（（x1-x0)^2+（y1-y0)^2）） x1 和y1变动�
 
 `随机过程 <StochasticProcesses>`_ 
 
+
+泛函数分析
+==========
+主要研究无限维空间（具有各种拓扑）的结构，它间之间的映射以及映射的微积分。
+
 See also
 ========
 

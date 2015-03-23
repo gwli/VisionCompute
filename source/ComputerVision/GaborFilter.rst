@@ -1,5 +1,5 @@
--+` 图像分析：Gabor滤波器解析与编程 <http://blog.csdn.net/linj_m/article/details/9897439>`_ 
-=========================================================================================================
+ 图像分析：Gabor滤波器解析与编程
+==================================
 
 
 为了研究局部范围内的频域特性，Gabor 提出短时傅里叶变换，也就是Gabor变换，
@@ -21,7 +21,7 @@
    h\left( {x,y,{\theta _k},\lambda ,{\sigma _x},{\sigma _y}} \right) = \frac{1}{{2\pi {\sigma _x}{\sigma _y}}}\exp \left\{ { - \pi \left[ {{{\left( {\frac{{{x_{{\theta _k}}}}}{{{\sigma _x}}}} \right)}^2} + {{\left( {\frac{{{y_{{\theta _k}}}}}{{{\sigma _y}}}} \right)}^2}} \right]} \right\} \cdot \exp \left( {\frac{{2\pi i{x_{{\theta _k}}}}}{\lambda }} \right)
 
 
-从上式中看出，Gabor是一个被复正弦函数调制的Gaussian函数，其中 :math:`\lambda` 和:math:`\theta k` 分别是正弦波的波长和方向， :math:`\theta k` 的定义为：
+从上式中看出，Gabor是一个被复正弦函数调制的Gaussian函数，其中 :math:`\lambda` 和 :math:`\theta k` 分别是正弦波的波长和方向， :math:`\theta_ k` 的定义为：
 
 .. math::
 
@@ -29,14 +29,14 @@
 
 
 k决定了滤波器方向的个数；
-:math:`\sigma_x`  and  :math:`\sigma_y为高斯包络在x方向和y方向的标准差。
+:math:`\sigma_x`  and  :math:`\sigma_y` 为高斯包络在x方向和y方向的标准差。
 
 .. math::
 
    \left\{ \begin{array}{l}
-{x_{{\theta _k}}} =  + x\cos \left( {{\theta _k}} \right) + y\sin \left( {{\theta _k}} \right)\\
-{y_{{\theta _k}}} =  - x\cos \left( {{\theta _k}} \right) + y\sin \left( {{\theta _k}} \right)
-\end{array} \right.
+   {x_{{\theta _k}}} =  + x\cos \left( {{\theta _k}} \right) + y\sin \left( {{\theta _k}} \right)\\
+   {y_{{\theta _k}}} =  - x\cos \left( {{\theta _k}} \right) + y\sin \left( {{\theta _k}} \right)
+   \end{array} \right.
 
 
 Lee提出利用gabor滤波器呈现图像。Gabor滤波器是椭圆高斯包络和复平面波的乘积，可以表示为：
@@ -44,10 +44,13 @@ Lee提出利用gabor滤波器呈现图像。Gabor滤波器是椭圆高斯包络�
 .. math::
 
    \begin{array}{c}
-{\Psi _{s,d}}\left( {x,y} \right) = {\Psi _{\vec k}}\left( {\vec z} \right) = \frac{{||\vec k||}}{{{\delta ^2}}} \cdot \exp \left( { - \frac{{||\vec k|{|^2} \cdot ||\vec z|{|^2}}}{{2{\delta ^2}}}} \right)\\
- \times \left[ {\exp  i\vec k \cdot \vec z - \exp \left( { - \frac{{{\delta ^2}}}{2}} \right)} \right]
-\end{array}
-
+   {\Psi _{s,d}}\left( {x,y} \right) = {\Psi _{\vec k}}\left( {\vec z} \right) = \frac{{||\vec k||}}{{{\delta ^2}}} \cdot \exp \left( { - \frac{{||\vec k|{|^      2} \cdot ||\vec z|{|^2}}}{{2{\delta ^2}}}} \right)\\
+    \times \left[ {\exp  i\vec k \cdot \vec z - \exp \left( { - \frac{{{\delta ^2}}}{2}} \right)} \right]
+   \end{array}
 
 其中 :math:`\vec z=[x,y]` 是空域变量，
 :math:`\vec k` 是频域变量，用来确定Gabor 滤波器的尺度和方向， :math:`\vec k = {k_s}{e^{i{\phi _d}}}`.
+
+详细参考：
+
+#. http://blog.csdn.net/linj_m/article/details/9897439

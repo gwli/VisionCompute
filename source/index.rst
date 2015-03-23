@@ -15,7 +15,6 @@ Contents:
    ComputerVision
    3DReconstruction
    FaceDetect
-   Math
 
 Indices and tables
 ==================

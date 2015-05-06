@@ -1,4 +1,4 @@
-������Ӿ���������
+计算机视觉
 ==================
 
 .. include:: ComputerVision/ComputerVision.rst

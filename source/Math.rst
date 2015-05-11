@@ -15,4 +15,5 @@
 .. include:: math/TenserAnalysis.rst
 .. include:: math/TensorDecomposition.rst
 .. include:: math/tTest.rst
+.. include:: math/Stats.rst
 

@@ -3,7 +3,7 @@
 
 
 `Normal inverse Wishart distribution <http://en.wikipedia.org/wiki/Normal-inverse-Wishart_distribution>`_
-====================================
+==========================================================================================================
 
 它是是多变量正态分布的共轭先验。
 
@@ -19,7 +19,7 @@
 
    \Sigma|\Phi,v\sim N(\Sigma|\Phi, v)
 
-服从inverse Wishart distribution，那么:maht:`(\mu,\Sigma)` 的联合概率密度函数服从:
+服从inverse Wishart distribution，那么 :math:`(\mu,\Sigma)` 的联合概率密度函数服从:
 
 .. math::
  
@@ -42,12 +42,12 @@ Gamma 分布在概率统计中频繁现身，众多的统计分布，包括常�
 
    Gamma(x|\alpha)=\frac{x^{\alpha-1}e^{-x}}{\Gamma(\alpha)}
 
+把 :math:`x= \beta t` 代入，得到：
 .. math::
 
    Gamma(t|\alpha,\beta)=\frac{\beta^\alpha  t^{(\alpha-1)}  e^{(-\beta t)} }{\Gamma(\alpha)}
 
 其中 :math:`\alpha` 称为 shape parameter， 主要决定了分布曲线的形状， 而 :math:`\beta` 称为 rate parameter 或者 inverse scale parameter ( :math:`\frac{1}{\beta}` 称为 scale parameter)， 主要决定曲线有多陡。
-
 
 Gamma 分布的迷人之处
 -----------------------
@@ -56,7 +56,7 @@ Gamma 分布与Poisson 分布、 Poisson 过程发生这密切的关系。参数
 
 .. math::
 
-   Poisson(X=k|\lambda) = \frac{\lambda^k}e^{-\lambda}{k!}
+   Poisson(X=k|\lambda) = \frac{\lambda^ke^{-\lambda}}{k!}
 
 在Gamma分布的密度中取 :math:`\alpha = k+1` 得到：
 
@@ -64,11 +64,8 @@ Gamma 分布与Poisson 分布、 Poisson 过程发生这密切的关系。参数
 
    Gamma(x|\alpha= k+1)=\frac{x^ke^{-x}}{\Gamma(k+1)} = \frac{x^ke^{-x}}{k!}
 
- 
 
-
-
-`t分布<http://class.htu.cn/jingjiyingyongtongji/seven5.htm>`_
+`t分布 <http://class.htu.cn/jingjiyingyongtongji/seven5.htm>`_
 ---------------------------------------------------------------
 
 
@@ -80,11 +77,11 @@ t分布是从正态分布而来的，但是在实际工作中， :math:`\sigma` 
 
 .. math::
 
-   \frac{\bar x -\mu}{s/sqrt{n}}  \sim N(0,1)
+   \frac{\bar x -\mu}{s/\sqrt{n}}  \sim N(0,1)
 
-但是总体方差  :math:`R^2/n` 是未知的，只能使用 :math:`s^2/n`: 代替，如果n很大， :math:`s^2/n`: 就是  :math:`s^2/n`: 的一个较好的估计量， :math:`\frac{\bar x -\mu}{s/sqrt{n}}` 仍然是一个标准的正态分布；
+但是总体方差  :math:`R^2/n` 是未知的，只能使用 :math:`s^2/n`: 代替，如果n很大， :math:`s^2/n`: 就是  :math:`s^2/n`: 的一个较好的估计量， :math:`\frac{\bar x -\mu}{s/\sqrt{n}}` 仍然是一个标准的正态分布；
 
-如果n较小， :math:`s^2/n` 与  :math:`s^2/n` 的差异较大，因此统计量 :math:`\frac{\bar x -\mu}{s/sqrt{n}}` 就不再是一个标准正态分布，而是服从t分布。
+如果n较小， :math:`s^2/n` 与  :math:`s^2/n` 的差异较大，因此统计量 :math:`\frac{\bar x -\mu}{s/\sqrt{n}}` 就不再是一个标准正态分布，而是服从t分布。
 
 
 t分布式检验一个样本平均数与一个已知的总体平均数的差异是否明显。t分布检验统计量为：

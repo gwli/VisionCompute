@@ -43,9 +43,11 @@ Gamma 分布在概率统计中频繁现身，众多的统计分布，包括常�
    Gamma(x|\alpha)=\frac{x^{\alpha-1}e^{-x}}{\Gamma(\alpha)}
 
 把 :math:`x= \beta t` 代入，得到：
+
 .. math::
 
    Gamma(t|\alpha,\beta)=\frac{\beta^\alpha  t^{(\alpha-1)}  e^{(-\beta t)} }{\Gamma(\alpha)}
+
 
 其中 :math:`\alpha` 称为 shape parameter， 主要决定了分布曲线的形状， 而 :math:`\beta` 称为 rate parameter 或者 inverse scale parameter ( :math:`\frac{1}{\beta}` 称为 scale parameter)， 主要决定曲线有多陡。
 
@@ -64,12 +66,9 @@ Gamma 分布与Poisson 分布、 Poisson 过程发生这密切的关系。参数
 
    Gamma(x|\alpha= k+1)=\frac{x^ke^{-x}}{\Gamma(k+1)} = \frac{x^ke^{-x}}{k!}
 
-
 `t分布 <http://class.htu.cn/jingjiyingyongtongji/seven5.htm>`_
 ---------------------------------------------------------------
 
-
-t分布用在哪？
 
 t分布是从正态分布而来的，但是在实际工作中， :math:`\sigma` 往往是未知的，常用s作为 :math:`\sigma` 的估计值，为了与u变换做区别，称为t变换，称为统计t值的分布称为t分布。
 
@@ -103,8 +102,6 @@ See also
 
 Thinking
 ========
-
-
 
 *随机从何而来因果论* 如果是随机就是否定因果论。其实二者是统一的，随机就是还没有发现的因果关系。为什么宙宇飞船都精确的控制，而一场球赛却不能知道结果呢，这个过程有什么难度，区别就在于飞船的每一个动作都可以精确的控制，而足球做不到精确的控制。
 

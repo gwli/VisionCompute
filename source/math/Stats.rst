@@ -1,6 +1,13 @@
 统计推倒
 ***********
 
+概率密度函数
+--------------
+
+PMF： 离散概率密度函数
+CDF： 离散概率密度函数的积分形式
+PDF:  连续概率密度函数
+
 
 `Normal inverse Wishart distribution <http://en.wikipedia.org/wiki/Normal-inverse-Wishart_distribution>`_
 ==========================================================================================================

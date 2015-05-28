@@ -17,3 +17,4 @@
 .. include:: ComputerVision/SparseModeling.rst
 .. include:: ComputerVision/Susan.rst
 .. include:: ComputerVision/Wavelet.rst
+.. include:: ComputerVision/ConvexHull.rst

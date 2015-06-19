@@ -15,4 +15,5 @@
 .. include:: math/TenserAnalysis.rst
 .. include:: math/TensorDecomposition.rst
 .. include:: math/Stats.rst
+.. include:: math/ConvexOptimation.rst
 

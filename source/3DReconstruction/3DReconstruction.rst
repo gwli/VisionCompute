@@ -1,5 +1,5 @@
 流程与发展思路
-=====================
+==============
 
 ------
 阶段 一 三维点的重构      
@@ -29,8 +29,10 @@
 走到这一段，就可以做动作的捕捉与分析了。
 
 ------
+
 行为分析 
 ------
+
 能够实现动作捕捉，再进一步进行为的分析，例如利用人的走路习惯来判断一个人的行为。
 [[摄像机模型]]
 ===================
@@ -41,20 +43,20 @@
 
 
 `重复性准则 <repeatilityRate>`_ 
-=====================================
+=================================
 
 
 `三视图几何 <threeViewGeometry>`_ 
-=======================================
+==================================
 
 [[RANSAC]]
 ==========
 
 `脸部识别 <FaceIdentification>`_ 
-=====================================
+=================================
 
 刚体变换和仿射变换：
-==============================
+====================
 
 
 刚体变换是放射变换的一种特殊情况。刚体变换就是保证长度和角度正交。比如在黄丽芬的变换中，就是一个刚体，如果旋转矩阵被一个任意奇异矩阵替换，就变成了仿射变换。因此刚体变换就是放射变换的一种特殊情况。其实放射变换也是一种线性变换，目的就是保持源图像中的直线和圆保持不变，是一个旋转，收缩加平移的过程。在Opencv中有关于affine transform 的一些code。
@@ -66,7 +68,6 @@
 理想的透视模型满足针孔摄像机模型。对三维空间的一个点（X,Y,Z）,投影到二维投影平面的坐标为（x,y）,上述投影过程可以表示为：
 #. `用单张2D图像重构3D场景 <http://blog.csdn.net/zouxy09/article/details/8083553>`_  我想未来的趋势结合红外和光学信息，光学镜头用来获取感光信息，雷达用来获得距离信息
 #. `3D重构总资讯 <http://www.cvchina.info/tag/3d-reconstruction/>`_  有空看下别人做的吧
-#. `Structure from Motion and 3D reconstruction on the easy in OpenCV 2.3+ &#91;w/ code <http://www.morethantechnical.com/2012/02/07/structure-from-motion-and-3d-reconstruction-on-the-easy-in-opencv-2-3-w-code/>`_ ] 实现3D重构opencv
 #. `仿射变换(Affine Transformation) <http://blog.sciencenet.cn/blog-605185-672291.html>`_  
 #. `深入探索透视投影变换(转) <http://blog.csdn.net/hoyi&#95;liu/article/details/4288443>`_  这个对于齐次变换和投影变换讲的比较清楚，看一下
 #. `如何根据相机的参数知道摄像机的内参数矩阵 <http://blog.csdn.net/hjchjc520/article/details/4133515>`_  
@@ -115,8 +116,18 @@
 -- Main.GegeZhang - 02 Dec 2013
 
 
+
+
 *直接全用2D照片来恢复3D物体*  其中之一那就是image based modeling. C:\快盘\gameEngine\modeling\paper  现在已经很火了。看来现在要抓紧时间把计算机视觉给整理出来。
 
 
 
 -- Main.GegeZhang - 21 Apr 2014
+
+SFM
+====
+
+从一堆照片中重建三维信息，把二维变成三维。当然用来重建地图也不是错的。
+
+
+ `Structure from Motion and 3D reconstruction on the easy in OpenCV 2.3+ &#91;w/ code <http://www.morethantechnical.com/2012/02/07/structure-from-motion-and-3d-reconstruction-on-the-easy-in-opencv-2-3-w-code/>`_ ] 实现3D重构opencv

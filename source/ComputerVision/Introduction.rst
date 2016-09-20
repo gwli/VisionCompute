@@ -2,7 +2,6 @@
 `机器学习 <machineLearning>`_ 
 ==================================
 
-
 对于相机的标定源于 `摄影测量学 <http://jpkt.whu.edu.cn/jpkc2005/syclx/3.class%20online/prscladuc.htm>`_  
 `摄相机标定 <http://wenku.baidu.com/view/c0df13d7b9f3f90f76c61be4.html>`_ 
 
@@ -10,18 +9,15 @@ application
 ===========
 
 
-
 .. csv-table:: 
 
    `ARToolKit <http://www.hitl.washington.edu/artoolkit/>`_  , ARToolKit 它是一个C/C++ 语言编写的库，通过它可以让我们很容易的编写 增强现实 应用程序。增强现实（AR）是将电脑虚拟的图像覆盖到真实世界画面中，这个技术在工业和理论研究方面都存在着极大的潜能。对于开发一个AR程序来说，最困难的部分在于实时的将虚拟图像覆盖到用户视口，并且和真实世界中的对象精确对齐。ARToolKit使用电脑图像技术计算摄像机和标记卡之间的相对位置，从而使程序员能够将他们的虚拟对象覆盖到标记卡上面。ARToolKit 提供的快速和准确的标记跟踪，能够让你快速的开发出许多更新更有趣的AR程序。 ,
 
 
-
-
-
 在计算机视觉中，一个算法通常需要很多子程序，怎样才能把这些算法综合起来的？还是仿真中只需要一部分？
 
 -- Main.GegeZhang - 24 Dec 2013
+
 Introduction
 ============
 
@@ -54,13 +50,14 @@ ris角点检测->KLTI匹配方法 适合于摄像机运动变化比较小
 sift 。当摄像机做大位移和旋转，甚至镜头缩放情况下， 这类方法依然能稳定地抽取和匹配特征点
 
 摄像机自标定
-==================
+=============
 
 
 
 matlab 中的标定问题，我想可以多次迭代，减小误差，但是怎样把这些得到的参数和实际的进行对比，我想这是一个问题，要用opencv进一步的矫正吗？是不是可以设计让机器人躲避障碍物？
+
 `图像拼接 <Study.ImageStitching>`_ 
-=======================================
+==================================
 
 `PCA <Study.PCA>`_ 
 ===================
@@ -87,7 +84,7 @@ matlab 中的标定问题，我想可以多次迭代，减小误差，但是怎�
 #. `视觉增强技术 <http://www.cvchina.info/>`_  
 
 计算机视觉牛人
-=====================
+==============
 
 #. `Gregory Hager <http://scholar.google.com/citations?view&#95;op&#61;view&#95;citation&#38;hl&#61;en&#38;user&#61;ivApfKcAAAAJ&#38;sortby&#61;pubdate&#38;citation&#95;for&#95;view&#61;ivApfKcAAAAJ:65Yg0jNCQDAC>`_  
 #. `David Lowe <http://www.cs.ubc.ca/~lowe/vision.html>`_  
@@ -127,15 +124,10 @@ ANSAC方法？？Levenberg-Marquard
 计算机更新很快，我应该怎么办？ 怎样学习？学习什么？
 
 
-
-
-
 Thinking
 ========
 
-
-
-*多视角几何学* 例如如何从三视图来恢复出原来图形，那么我就能够多个角度来照片，来恢复三维的图形。首先要知道多个图片中图一点。然后再来恢复。
+*多视角几何学*  例如如何从三视图来恢复出原来图形，那么我就能够多个角度来照片，来恢复三维的图形。首先要知道多个图片中图一点。然后再来恢复。
 
 -- Main.GangweiLi - 30 Sep 2013
 

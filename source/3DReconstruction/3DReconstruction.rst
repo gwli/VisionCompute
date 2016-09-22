@@ -148,4 +148,16 @@ http://ccwu.me/vsfm/#demo 现成的可视化操作
  `Structure from Motion and 3D reconstruction on the easy in OpenCV 2.3+ &#91;w/ code <http://www.morethantechnical.com/2012/02/07/structure-from-motion-and-3d-reconstruction-on-the-easy-in-opencv-2-3-w-code/>`_ ] 实现3D重构opencv
 
 
+视觉系统的三个层次
+==================
+
+Marr理论，计算理论层次，表达与算法层次，硬件实现层次。
+
+难点:
+=====
+
+#. 图像对景物的约束不充分，
+#. 多种因素在图像中相互混淆 
+#. 理解自然景物要求大量知识 
+
 

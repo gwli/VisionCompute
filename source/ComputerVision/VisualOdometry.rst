@@ -58,3 +58,4 @@ Bundle Adjustment 光束法平差详解
 http://blog.csdn.net/junshen1314/article/details/48860951 这个不正是自己所想传感器融合的方法。每一个点被多个传感器同时检测到，得到一个这些检测误差的值就是真值。 
 
 数值计算到后期玩的就都是误差分析。
+http://blog.csdn.net/abcjennifer/article/details/7588865

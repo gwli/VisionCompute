@@ -152,6 +152,10 @@ http://ccwu.me/vsfm/#demo 现成的可视化操作
 从一堆照片中重建三维信息，把二维变成三维。当然用来重建地图也不是错的。
  `Structure from Motion and 3D reconstruction on the easy in OpenCV 2.3+ &#91;w/ code <http://www.morethantechnical.com/2012/02/07/structure-from-motion-and-3d-reconstruction-on-the-easy-in-opencv-2-3-w-code/>`_ ] 实现3D重构opencv
 
+https://en.wikipedia.org/wiki/Structure_from_motion 从动态的2D序列中恢复3D的信息，就像人眼实时处理一样。 或者快速实现点与点之间的对应。除了那些相似度计算的SIFT/SURF等方法。
+
+
+而距离，拓扑和方向是空间关系的三个组成部分。
 
 视觉系统的三个层次
 ==================

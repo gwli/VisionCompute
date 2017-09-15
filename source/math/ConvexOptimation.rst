@@ -68,7 +68,7 @@ http://www.codelast.com/?p=2573
 
 .. math::
 
-   \theta_{i + 1}} = \theta_i - \alpha {J_i}/\nabla{J_i} 
+   \theta_{i + 1} = \theta_i - \alpha {J_i}/\nabla{J_i} 
    
 相比梯度下降法速度更快。 然后又将了GLM，说明最小二乘和 logistic 回归都是GLM 指数分布的特殊情况。是不是我们现在的所有问题都是指数分布？主要是通过把某个问题划归为某个分布，然后求出期望:math:`\mu` ，从而得到h(x)函数。
 
